@@ -10,13 +10,13 @@ beforeEach(() => {
 
 test('renders counter message', () => {
   // Complete the unit test below based on the objective in the line above
-  render(<Counter />);
   const counterMessage = screen.getByText(/counter/i);
   expect(counterMessage).toBeInTheDocument();
 });
 
 test('should render initial count with value of 0', () => {
   // Complete the unit test below based on the objective in the line above
+  expect(screen.getByTestID('count')).toBe('0');
 });
 
 test('clicking + increments the count', () => {
